@@ -1,0 +1,8 @@
+<div class="feedback">
+    <div class="header">
+        From <b><?= htmlspecialchars($feedback['name']) ?></b>
+        <?= date('d.m.Y H:i', strtotime($feedback['date'])) ?>
+    </div>
+    <hr>
+    <div class="body"><?= htmlspecialchars($feedback['text']) ?></div>
+</div>

@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: aliceblue;
+}
+
+#feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#feedback-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+#feedback-form .form-row label {
+    font-weight: bold;
+}
+
+#feedback-form .form-row .required {
+    color: red;
+    vertical-align: super;
+}
+#feedback-form .form-row .required-description {
+    color: red;
+    vertical-align: sub;
+}
+
+#feedback-form .form-row input {
+    max-width: 200px;
+}
+
+#feedback-form .form-row input, #feedback-form .form-row textarea {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#feedback-form .form-row input[type="checkbox"] {
+    margin: 0;
+}
+
+
+#feedback-form button[type="submit"] {
+    width: 150px;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: solid 1px black;
+    padding: 4px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+#feedback-form button[type="submit"]:hover {
+    background-color: aquamarine;
+}
+
+.feedback {
+    background-color: #e2e2d1;
+    margin: 20px;
+    padding: 20px;
+}
+
+#js-after-success-form-send {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+}

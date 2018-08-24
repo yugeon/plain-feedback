@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback Example</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <div class="main-container">
+            <h1>Plain PHP Feedback Example</h1>
+            <form action="" method="POST" id="feedback-form">
+                <div class="form-row">
+                    <label for="feedback-form-name">Name:<span class="required">*</span></label>
+                    <input type="text" name="name" id="feedback-form-name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="feedback-form-email">Email:</label>
+                    <input type="email" name="email" id="feedback-form-email">
+                </div>
+
+                <div class="form-row">
+                    <label for="feedback-form-text">Feedback:<span class="required">*</span></label>
+                    <textarea name="text" id="feedback-form-text" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <input type="checkbox" id="feedback-form-accept" name="accept">
+                        <label for="feedback-form-accept">I accept The Terms of Use and give my consent to process my personal data according to The Privacy Policy.</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <span><span class="required-description">*</span> - required fields</span>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+
+            <div id="js-after-success-form-send">Thanks!</div>
+
+            <div class="user-feedbacks">
+                <?php foreach ($data as $feedback): ?>
+                <?php include(__DIR__ . '/../feedback.phtml'); ?>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

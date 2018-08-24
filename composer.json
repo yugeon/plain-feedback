@@ -1,0 +1,19 @@
+{
+    "name": "yugeon/feedback",
+    "description": "Plain php feedback example",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Yugeon Gruzdev",
+            "email": "yugeon.ru@gmail.com"
+        }
+    ],
+    "require": {
+        "larapack/dd": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
